@@ -1,0 +1,43 @@
+# POST http://localhost:3000/hamburguesa
+# content-type: application/json
+
+# {
+#   "nombre": "kangrburger",
+#   "precio": "5990",
+#   "descripcion": "",
+#   "imagen": "https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"
+# }
+
+# GET http://localhost:3000/hamburguesa
+
+# DELETE http://localhost:3000/hamburguesa/1
+
+# PATCH  http://localhost:3000/hamburguesa/1
+# content-type: application/json
+
+# {
+#         "descripcion": "Mala burga"
+# }
+
+# POST http://localhost:3000/ingrediente
+# content-type: application/json
+
+# {
+#         "nombre": "borrar",
+#         "descripcion": "fresca"
+# }
+
+# GET http://localhost:3000/ingrediente/2
+
+# DELETE http://localhost:3000/ingrediente/
+
+# PATCH  http://localhost:3000/ingrediente/5
+# content-type: application/json
+
+# {
+#         "descripcion": "Mala"
+# }
+
+
+# PUT http://localhost:3000/hamburguesa/2/ingrediente/4
+# DELETE http://localhost:3000/hamburguesa/2/ingrediente/3

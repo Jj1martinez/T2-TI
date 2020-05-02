@@ -1,11 +1,8 @@
-const classroom = require('./classroom');
-const student = require('./student');
-const lecturer = require('./lecturer');
-const course = require('./course');
+const hamburguesa = require('./hamburguesa');
+const ingrediente = require('./ingrediente');
+
 
 module.exports = {
-  classroom,
-  student,
-  lecturer,
-  course,
+  hamburguesa,
+  ingrediente
 };
