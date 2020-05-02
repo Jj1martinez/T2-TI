@@ -81,7 +81,6 @@ module.exports = {
       .then((hamburguesa) => res.status(201).send(hamburguesa))
       .catch((error) => res.status(400).send(error));
   },
-
   update(req, res) {
     return Hamburguesa
       .findByPk(req.params.id)
@@ -123,13 +122,13 @@ module.exports = {
       .findByPk(req.params.id)
       .then(hamburguesa => {
         if (!hamburguesa) {
-          return res.status(400).send({
-            message: 'Hamburguesa Not Found',
+          return res.status(404).send({
+            message: 'Hamburguesa inexistente',
           });
         }
         return hamburguesa
           .destroy()
-          .then(() => res.status(204).send())
+          .then(() => res.status(200).send())
           .catch((error) => res.status(400).send(error));
       })
       .catch((error) => res.status(400).send(error));
