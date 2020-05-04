@@ -32,12 +32,14 @@ module.exports = {
   },
 
   add(req, res) {
+    const {nombre,descripcion}= req.body
+    if (!nombre || !descripcion) {
+      return res.status(400).send({message: "Invalid parameters"})
+    }
     return Ingrediente
       .create({
         nombre: req.body.nombre,
-        precio: req.body.precio,
-        descripcion: req.body.descripcion,
-        imagen: req.body.imagen
+        descripcion: req.body.descripcion
       })
       .then((e) => res.status(201).send({id:e.id,nombre: e.nombre,descripcion:e.descripcion}))
       .catch((error) => res.status(400).send(error));

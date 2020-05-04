@@ -1,18 +1,18 @@
-# POST http://localhost:3000/hamburguesa
+# POST http://lasburgas.herokuapp.com/hamburguesa
 # content-type: application/json
 
 # {
-#   "nombre": "kangrburger",
-#   "precio": "5990",
-#   "descripcion": "",
+#   "nombre": "borrar",
+#   "precio": "4990",
+#   "descripcion": "eso",
 #   "imagen": "https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"
 # }
 
-# GET http://localhost:3000/hamburguesa
+# GET http://lasburgas.herokuapp.com/hamburguesa
 
-# DELETE http://localhost:3000/hamburguesa/1
+# DELETE http://lasburgas.herokuapp.com/hamburguesa/3
 
-# PATCH  http://localhost:3000/hamburguesa/1
+# PATCH  http://lasburgas.herokuapp.com/hamburguesa/1
 # content-type: application/json
 
 # {
@@ -23,13 +23,13 @@
 # content-type: application/json
 
 # {
-#         "nombre": "borrar",
-#         "descripcion": "fresca"
+#         "name": "pepino",
+#         "descripcion": "asd"
 # }
 
 # GET http://localhost:3000/ingrediente/2
 
-# DELETE http://localhost:3000/ingrediente/
+# DELETE http://lasburgas.herokuapp.com/ingrediente/2
 
 # PATCH  http://localhost:3000/ingrediente/5
 # content-type: application/json
@@ -39,5 +39,5 @@
 # }
 
 
-# PUT http://localhost:3000/hamburguesa/2/ingrediente/4
-# DELETE http://localhost:3000/hamburguesa/2/ingrediente/3
+# PUT http://lasburgas.herokuapp.com/hamburguesa/2/ingrediente/3
+# DELETE http://lasburgas.herokuapp.com/hamburguesa/2/ingrediente/2

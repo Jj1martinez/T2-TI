@@ -71,6 +71,10 @@ module.exports = {
   },
 
   add(req, res) {
+    const {nombre,precio,imagen,descripcion}= req.body
+    if (!nombre || !descripcion || !imagen || !precio) {
+      return res.status(400).send({message: "Invalid parameters"})
+    }
     return Hamburguesa
       .create({
         nombre: req.body.nombre,
@@ -78,7 +82,12 @@ module.exports = {
         descripcion: req.body.descripcion,
         imagen: req.body.imagen
       })
-      .then((hamburguesa) => res.status(201).send(hamburguesa))
+      .then((hamburguesa) => res.status(201).send({id: hamburguesa.id,
+        nombre: hamburguesa.nombre,
+        precio: hamburguesa.precio,
+        descripcion: hamburguesa.descripcion,
+        imagen:hamburguesa.imagen,
+        ingredientes: [] })) // ingredientes parte vacío
       .catch((error) => res.status(400).send(error));
   },
   update(req, res) {
